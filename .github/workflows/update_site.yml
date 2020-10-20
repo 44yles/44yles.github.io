@@ -12,6 +12,7 @@ jobs:
     - name: shalzz/zola-deploy-action
       uses: shalzz/zola-deploy-action@v0.12.0
       env:
+        GIT_COMMIT: ${{ GITHUB_SHA }}
         # Target branch
         PAGES_BRANCH: gh-pages
         # Provide personal access token
