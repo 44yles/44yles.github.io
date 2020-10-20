@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}{{ section.title }}{% endblock %}
+{% block content %}
+<hgroup class="title">
+  <h1>{{ section.title }}</h1>
+  <p><a href="/">Home</a></p>
+</hgroup>
+{{ section.content | safe }}
+{% endblock %}

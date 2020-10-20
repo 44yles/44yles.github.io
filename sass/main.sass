@@ -1,0 +1,75 @@
+@import milligram/_Color
+@import _color
+@import milligram/_Base
+@import _base
+@import milligram/_Blockquote
+@import milligram/_Button
+@import milligram/_Code
+@import milligram/_Divider
+@import milligram/_Form
+@import milligram/_Grid
+@import milligram/_Link
+@import milligram/_List
+@import milligram/_Spacing
+@import milligram/_Table
+@import milligram/_Typography
+@import milligram/_Image
+@import milligram/_Utility
+
+$mobile-limit: 68rem
+
+body
+  margin: 3rem 0
+  line-height: 1.4
+  font-size: 1.4rem
+  
+.container
+  max-width: $mobile-limit
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-sans
+  letter-spacing: -2px
+  font-weight: 700
+
+a
+  color: $color-primary
+  text-decoration: underline
+
+  &:hover
+    color: darken($color-primary, 20%)
+
+
+ul
+  list-style-type: disc
+
+// Footnotes
+.footnote-definition
+  font-size: 1.2rem
+
+// Title
+hgroup.title
+  h1, p
+    margin: 0
+  margin-bottom: 2.5rem
+
+// Navigation
+div.nav
+  ul
+    li
+      margin: 0
+
+// Footer
+footer
+  margin-top: 10rem
+  margin-bottom: 2.0rem
+  font-family: $font-sans
+  font-size: 1.0rem
+  color: lighten($color-secondary, 75%)
+  p
+    margin: 0
+  a
+    color: lighten($color-secondary, 55%)
+    &:hover
+      color: lighten($color-secondary, 30%)
+
+// @media screen and (min-width: $mobile-limit)
