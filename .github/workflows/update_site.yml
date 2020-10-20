@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@master
     # Write CNAME file
     - name: Write CNAME File
-      run: echo '44yles.dev' > CNAME
+      run: 'echo "44yles.dev" > CNAME'
     # Build & deploy
     - name: shalzz/zola-deploy-action
       uses: shalzz/zola-deploy-action@v0.12.0
