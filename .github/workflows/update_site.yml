@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        checkout-depth: 0
+        fetch-depth: 0
         ref: main
 
     - name: Build Site
@@ -21,7 +21,7 @@ jobs:
         echo '44yles.dev' > CNAME
         git init
         git config user.name "GitHub Actions"
-        git conifg user.email "github-actions-bot@noreply.github.com"
+        git config user.email "github-actions-bot@noreply.github.com"
         git add .
         git commit -m "Deploy ${{ github.repository }} to gh-pages"
         git push --force "${{ github.repository }}" master:gh-pages
