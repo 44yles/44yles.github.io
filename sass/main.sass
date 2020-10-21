@@ -19,7 +19,6 @@
 $mobile-limit: 68rem
 
 body
-  margin: 3rem 0
   line-height: 1.4
   font-size: 1.4rem
   
@@ -38,6 +37,8 @@ a
   &:hover
     color: darken($color-primary, 20%)
 
+div.main
+  margin-top: 3.0rem
 
 ul
   list-style-type: disc
@@ -58,10 +59,17 @@ div.nav
     li
       margin: 0
 
+// All / Footer-push
+
+div.all
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  justify-content: space-between
+
 // Footer
 footer
-  margin-top: 10rem
-  margin-bottom: 2.0rem
+  margin: 3.0rem 0
   font-family: $font-sans
   font-size: 1.0rem
   color: lighten($color-secondary, 75%)

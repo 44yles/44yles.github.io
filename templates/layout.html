@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="/main.css">
   </head>
   <body>
-    <div class="main container">
-    {% block content %}
-    {% endblock %}
-    </div>
-    <footer>
-      <div class="container">
-        <p>Made with <a href="https://www.getzola.org/">Zola</a> and <a href="https://milligram.io/">Milligram</a>.</p>
-        <p>Copyright © 2020, Myles Hathcock <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a></p>
-        {% set sha = get_env(name="GITHUB_SHA", default="dev") %}
-        <p>Commit <a href="https://github.com/44yles/44yles.github.io/commit/{{ sha }}">{{ sha }}</a> built on {{ now() | date }}</p>
+    <div class="all">
+      <div class="main container">
+      {% block content %}
+      {% endblock %}
       </div>
-    </footer>
+      <footer>
+        <div class="container">
+          <p>Made with <a href="https://www.getzola.org/">Zola</a> and <a href="https://milligram.io/">Milligram</a>.</p>
+          <p>Copyright © 2020, Myles Hathcock <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a></p>
+          {% set sha = get_env(name="GITHUB_SHA", default="dev") %}
+          <p>Commit <a target="_blank" href="https://github.com/44yles/44yles.github.io/commit/{{ sha }}">{{ sha }}</a> built on {{ now() | date }}</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
