@@ -64,6 +64,8 @@ div.nav
 div.all
   display: flex
   min-height: 100vh
+  // fix from https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
+  min-height: -webkit-fill-available
   flex-direction: column
   justify-content: space-between
 
